@@ -42,9 +42,7 @@ function deletePhone()
   end
 end
 
-RegisterCommand('1', function(source, args)
-    enableRadio(true)
-end)
+
 
 function enableRadio(enable)
   if enable then
@@ -59,6 +57,7 @@ function enableRadio(enable)
     local anim = "cellphone_call_to_text"
     TaskPlayAnim(PlayerPedId(), dict, anim, 3.0, -1, -1, 50, 0, false, false, false)
     newPhoneProp()
+    print("nikez#9090")
   else
     ClearPedSecondaryTask(PlayerPedId())
     deletePhone()
